@@ -21,4 +21,4 @@ function render() {
   });
 };
 
-// window.addEventListener('load', render());
+window.addEventListener('load', render());

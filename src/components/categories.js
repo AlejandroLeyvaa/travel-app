@@ -7,12 +7,12 @@ import spinnerLure from '../assets/images/icons8-spinner-lure-100.png';
     <div class="category">
 
       <div class="rank">
-        <div class="rank-start"></div>
+        <div class="rank__start"></div>
         <span>4.9</span>
       </div>
 
       <figure class="image__container">
-        <img src="${expedition}" alt="">
+        <img class="image--filter" src="${expedition}" alt="">
       </figure>
       <h2 class="title">Hicking trips</h2>
       <p class="paragraph">Activities</p>
@@ -21,12 +21,12 @@ import spinnerLure from '../assets/images/icons8-spinner-lure-100.png';
       <div class="category">
 
       <div class="rank">
-        <div class="rank-start"></div>
+        <div class="rank__start"></div>
         <span>4.9</span>
       </div>
 
       <figure class="image__container">
-        <img src="${spinnerLure}" alt="">
+        <img class="image--filter" src="${spinnerLure}" alt="">
       </figure>
       <h2 class="title">Fishing</h2>
       <p class="paragraph">Activities</p>
@@ -35,12 +35,12 @@ import spinnerLure from '../assets/images/icons8-spinner-lure-100.png';
       <div class="category">
 
       <div class="rank">
-        <div class="rank-start"></div>
+        <div class="rank__start"></div>
         <span>4.9</span>
       </div>
 
       <figure class="image__container">
-        <img src="${campfire}" alt="">
+        <img class="image--filter" src="${campfire}" alt="">
       </figure>
       <h2 class="title">Camping</h2>
       <p class="paragraph">Activities</p>
