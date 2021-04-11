@@ -1,0 +1,254 @@
+:root {
+  --primary-dark: #1f2326;
+  --primary-light: #f8f8f8;
+  --text-color: #ffffff;
+  --background: #053247;
+  --soft-blue: #2782AC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+video,
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.header {
+  height: max-content;
+}
+
+.hero {
+  background-color: var(--primary-dark);
+  width: 100%;
+  min-width: 320px;
+}
+
+.header .title {
+  margin-bottom: 1.6rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.search {
+  border-radius: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.6rem;
+  position: absolute;
+  top: 100px;
+  z-index: 10;
+}
+
+.search :is(input) {
+  border: none;
+  border-radius: 25px;
+  width: 100%;
+  height: 40px;
+}
+
+.main {
+  padding: 1.6rem 1.6rem 0 1.6rem;
+}
+
+.main .title {
+  margin-bottom: 1.6rem;
+}
+
+.category {
+  border: 3px solid #fff;
+  border-radius: 8px;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem;
+}
+
+.category:active, .category:hover {
+  background-color: var(--soft-blue);
+  border-color: var(--soft-blue);
+}
+
+.image__container {
+  width: max-content;
+  height: max-content;
+  margin-bottom: 1.6rem;
+}
+
+.image__container :is(.image--filter) {
+  filter: invert(100%);
+}
+
+.rank {
+  border-radius: 25px;
+  background-color: #fff;
+  width: 42px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+.rank__start {
+  background-color: var(--background);
+  width: 13px;
+  height: 13px;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.tours {
+  padding-block-end: 0;
+}
+
+.tours .title {
+  padding: revert;
+}
+
+.tours__container {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  overflow-x: scroll;
+}
+
+/* .tours__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+} */
+
+/* .tours__container .image__container :is(img) {
+	border-radius: 50%;
+	width: 250px;
+	max-width: revert;
+	height: 250px;
+} */
+
+.tours__container .image__container :is(img) {
+  border-radius: 10px;
+	width: 150px;
+	max-width: revert;
+	height: 150px;
+  margin-inline: .8rem;
+  transform: skewX(-10deg);
+}
+
+.tours__container .image__container :is(img):active, .tours__container .image__container :is(img):hover, .isActive {
+  animation: scale .1s;
+  margin-inline-end: 1.6rem;
+	transform-origin: bottom;
+	transform: scaleY(1.2) skewX(-10deg);
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleY(1.05) skewX(-10deg);
+    /* margin-inline-end: .8rem; */
+  }
+  100% {
+    transform: scaleY(1.2) skewX(-10deg);
+    /* margin-inline-end: 1.6rem; */
+  }
+}
+
+.tours__container .image__container:first-child :is(img) {
+  margin-inline-start: 1.6rem;
+}
+
+.tours__container .image__container:first-child :is(img):active {
+  animation: padding .15s;
+	margin-inline-start: 1.6rem;
+}
+
+@keyframes padding {
+  0% {
+    margin-inline-start: .8rem;
+  }
+  100% {
+    margin-inline-start: 1.6rem;
+  }
+}
+
+.tours__container .image__container:last-child :is(img) {
+  margin-inline-end: revert;
+}
+
+.tours-description {
+	background-color: var(--soft-blue);
+  border-radius: 5px;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+	position: relative;
+  padding: 1.6rem;
+	padding-block-start: 7.6rem;
+	padding-block-end: 1.6rem;
+	bottom: 60px;
+	z-index: -1;
+}
+
+.tours-description .title {
+  font-size: 1.6rem;
+}
+
+.tours-description .paragraph {
+  font-size: 1.4rem;
+}
