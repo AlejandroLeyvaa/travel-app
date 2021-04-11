@@ -1,8 +1,8 @@
 import categories from './components/categories';
-import mainComponent from './components/tours';
 import header from './components/header';
-import './styles/styles.css';
 import tours from './components/tours';
+import './styles/styles.css';
+import './styles/desktop.css';
 
 async function insertComponentIn(where, createElement, component,  classNameElement) {
   const selectedElement = document.querySelector(where);

@@ -2,7 +2,7 @@ import lake from '../assets/images/lake.jpg';
 
 const header = `
   <figure class="hero">
-    <img src="${lake}" alt="">
+    <img class="hero-image" src="${lake}" alt="">
   </figure>
   <form class="search">
     <h2 class="title">The journey starts now!</h2>

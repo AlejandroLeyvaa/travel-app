@@ -1,0 +1,71 @@
+:root {
+  --primary-dark: #1f2326;
+  --primary-light: #f8f8f8;
+  --text-color: #ffffff;
+  --background: #053247;
+  --soft-blue: #2782AC;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-image {
+    width: 100vw;
+    height: 100%;
+    max-height: 100vh;
+  }
+
+  .search .title {
+    font-size: 5rem;
+  }
+
+  .search {
+    padding-inline: 25rem;
+    top: 40vh;
+  }
+
+  .main {
+    padding-block-start: 2.4rem;
+    padding-inline: 25rem;
+  }
+
+  .categories {
+    display:  flex;
+  }
+
+  .category {
+    margin: 2.4rem;
+    margin-inline: 1.2;
+  }
+
+  .category:first-child {
+    margin: 2.4rem;
+    margin-inline-start: revert;
+  }
+
+  .category:last-child {
+    margin: 2.4rem;
+    margin-inline-end: revert;
+  }
+
+  .tours__container {
+    height: revert;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: scroll;
+    scrollbar-color: var(--soft-blue) var(--soft-blue);
+    scrollbar-arrow-color: red;
+  }
+
+  .tours__container::-webkit-scrollbar-track {
+    background: red;
+  }
+
+  .tours__container .image__container :is(img) {
+    width: 250px;
+    height: 250px;
+    margin-inline: 1.2rem;
+  }
+
+  .tours__container .image__container:first-child :is(img) {
+    margin-inline-start: 2.4rem;
+  }
+}
