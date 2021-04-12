@@ -2,12 +2,31 @@ import lake from '../assets/images/lake.jpg';
 
 const header = `
   <figure class="hero">
-    <img class="hero-image" src="${lake}" alt="">
+    <img src="${lake}" alt="">
   </figure>
-  <form class="search">
+
+  <div class="date">
     <h2 class="title">The journey starts now!</h2>
-    <input type="text" name="search" id="search">
-  </form>
+    <form class="form" id="form">
+      <label for="country">
+        <p class="paragraph">Location</p>
+        <select id="country">
+          <option value="Mexico">México</option>
+          <option value="United States">United States</option>
+          <option value="United States">United States</option>
+        </select>
+      </label>
+      <label for="date">
+        <p class="paragraph">Date</p>
+        <input type="date" id='date' name='date'>
+      </label>
+      <label for="guests">
+        <p class="paragraph">Guests</p>
+        <input type="number" id='guests' name='guests'>
+      </label>
+      <button>Send</button>
+    </form>
+  </div>
 `;
 
 export default header;

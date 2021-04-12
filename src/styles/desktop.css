@@ -13,11 +13,11 @@
     max-height: 100vh;
   }
 
-  .search .title {
+  .date .title {
     font-size: 5rem;
   }
 
-  .search {
+  .date {
     padding-inline: 25rem;
     top: 40vh;
   }
@@ -52,12 +52,8 @@
     align-items: flex-end;
     overflow-x: scroll;
     scrollbar-color: var(--soft-blue) var(--soft-blue);
-    scrollbar-arrow-color: red;
   }
 
-  .tours__container::-webkit-scrollbar-track {
-    background: red;
-  }
 
   .tours__container .image__container :is(img) {
     width: 250px;

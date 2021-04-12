@@ -1,6 +1,7 @@
 import categories from './components/categories';
 import header from './components/header';
 import tours from './components/tours';
+import sendData from './utils/sendData';
 import './styles/styles.css';
 import './styles/desktop.css';
 
@@ -12,7 +13,6 @@ async function insertComponentIn(where, createElement, component,  classNameElem
   return await selectedElement.appendChild(element);
 };
 
-
 function render() {
   insertComponentIn('#root', 'header', header, 'header');
   insertComponentIn('#root', 'main', categories, 'main')
@@ -22,3 +22,5 @@ function render() {
 };
 
 window.addEventListener('load', render());
+
+sendData();
