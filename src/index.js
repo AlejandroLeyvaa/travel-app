@@ -38,13 +38,13 @@ function schedules() {
           const template = `
       <div>
         <h2 class="title">
-          ${item.country}
+          Location: ${item.country}
         </h2>
         <h2 class="title">
-          ${item.date}
+          Date of travel: ${item.date}
         </h2>
         <h2 class="title">
-          ${item.guests}
+          Guests: ${item.guests}
         </h2>
       </div>
       `;
