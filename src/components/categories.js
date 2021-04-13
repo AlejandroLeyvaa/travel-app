@@ -4,6 +4,7 @@ import spinnerLure from '../assets/images/icons8-spinner-lure-100.png';
 
   const category = `
     <section class="categories">
+      <h2 class="title">Select a category</h2>
         <div class="category">
           <div class="rank">
             <div class="rank__start"></div>

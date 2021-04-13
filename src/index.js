@@ -30,7 +30,7 @@ window.addEventListener('load', render());
 
 sendData();
 
-document.getElementById('date').addEventListener('click', (e) => {
+document.getElementById('date-container').addEventListener('click', (e) => {
   const element = e.target;
   const form = document.getElementById('form');
 
