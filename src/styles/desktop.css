@@ -19,8 +19,12 @@
 
   .date {
     padding-inline: 25rem;
-    top: 40vh;
+    /* top: 40vh; */
   }
+
+  /* .date .form .button {
+    width: 25%;
+  } */
 
   .main {
     padding-block-start: 2.4rem;

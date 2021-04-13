@@ -31,6 +31,11 @@ img {
   display: block;
 }
 
+input[type=number]::part(native) {
+  background-color: red;
+  appearance: none;
+}
+
 .header {
   height: max-content;
 }
@@ -51,42 +56,61 @@ img {
   font-weight: 700;
 }
 
-.paragraph {
+.paragraph, button, .button {
   color: #fff;
   font-size: 1.6rem;
   font-weight: normal;
 }
 
 .date {
+	border-radius: 25px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30%;
+	padding: 0 1.6rem;
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+
+.date .button {
   border-radius: 25px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1.6rem;
-  position: absolute;
-  top: 100px;
-  z-index: 10;
+  border: none;
+  color: #2782AC;
+  font-weight: 700;
 }
 
 .date .form {
   background-color: #fff;
-  display: flex;
+  width: 100%;
+  display: none;
   border-radius: 10px;
-  padding: .8rem;
+  padding: 1.6rem;
+}
+
+.date .button:hover, .date .button:active {
+  background-color: #2782AC;
+  color: #fff;
+}
+
+.date .form label .paragraph {
+  margin-bottom: .8rem;
 }
 
 .date :is(input, select, button) {
   background-color: #fff;
   border: none;
+  border-block-end: 2px solid #2782AC;
   width: 100%;
   height: 40px;
   align-self: end;
+  margin-bottom: 1.6rem;
 }
 
 .form select {
-  content: "\f078";
   appearance: none;
   cursor: pointer;
 }
@@ -99,12 +123,16 @@ img {
   color: #2782AC;
 }
 
-.form select {
+/* .form select {
   border-end-start-radius: 10px;
-}
+} */
 
 .form button {
+  background-color: #2782AC;
   border-radius: 10px;
+  border: none;
+  color: #fff;
+  margin-bottom: 0;
 }
 
 .main {
@@ -140,21 +168,9 @@ img {
   padding: 1.6rem;
 }
 
-.category .activity:active, .category .activity:hover {
-  background-color: #A1CFE4;
-  /* background-color: #8f8f8f; */
-  border-radius: 25px;
-  text-decoration: none;
-  padding: 1.6rem;
-}
-
 .category .activity .paragraph{
   color: #2782AC;
   font-weight: bold;
-}
-
-.category .activity:active .paragraph, .category .activity:hover .paragraph {
-  color: #2782AC;
 }
 
 .image__container {
@@ -325,14 +341,14 @@ img {
   text-align: center;
 }
 
-.modal .close {
+.modal .close, .form .close {
   width: 100%;
   height: 32px;
   display: flex;
   justify-content: center;
 }
 
-.modal .circle {
+.modal .circle, .form .circle {
   background-color: #fff;
   border-radius: 50%;
   width: 32px;
@@ -343,18 +359,26 @@ img {
   align-items: center;
 }
 
-.modal .rec {
+.form .circle {
+  background-color: #2782AC;
+}
+
+.modal .rec, .form .rec {
   background-color: #d9162c;
   width: 16px;
   height: 4px;
   position: absolute;
 }
 
-.modal .rec:first-child {
+.form .rec {
+  background-color: #fff;
+}
+
+.modal .rec:first-child, .form .rec:first-child {
 	transform: rotate(45deg);
 }
 
-.modal .rec:last-child {
+.modal .rec:last-child, .form .rec:last-child {
 	transform: rotate(-45deg);
 
 }
