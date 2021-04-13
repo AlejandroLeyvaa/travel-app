@@ -1,26 +1,24 @@
 import TravelApi from './TravelApi';
 import modal from './modal';
 import closeModal from './closeModal';
+import state from './state';
 
 const travelApi = new TravelApi();
+
+export let listOfSchedules = [];
+
 function sendData() {
   const form = document.getElementById('form');
   let data = {};
 
-  const date = document.getElementById('date');
-
-  // date.addEventListener('input', (e) => {
-  //   console.log(e.target);
-  //   console.log(e.target.valueAsDate);
-  // })
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const scheduleRoute = document.getElementById('schedule-route');
     const country = document.getElementById('country').value;
     const date = document.getElementById('date').value;
     const guests = document.getElementById('guests');
     const guestsValue = guests.value;
-
-    console.log(date);
+    scheduleRoute.style.display = 'block';
 
     data = {
       country,
@@ -34,6 +32,8 @@ function sendData() {
       //   modal(response.message);
       //   closeModal();
       // });
+
+      listOfSchedules.push(data);
       modal(
         `Su viaje ha sido agendado para la fecha ${date}, en ${data.country} y con ${data.guests} huespedes`
         );
@@ -43,7 +43,6 @@ function sendData() {
       modal('Fill all fields', redColor);
       closeModal();
     }
-    // console.log(data);
   });
 
   return data;

@@ -3,7 +3,7 @@
   --primary-light: #f8f8f8;
   --text-color: #ffffff;
   --background: #053247;
-  --soft-blue: #2782AC;
+  --soft-blue: #2782ac;
 }
 
 * {
@@ -31,17 +31,36 @@ img {
   display: block;
 }
 
-input[type=number]::part(native) {
+input[type='number']::part(native) {
   background-color: red;
   appearance: none;
 }
 
-button:active, button:hover, input:active, input:hover, .circle:active, .circle:hover {
+a {
+  text-decoration: none;
+}
+
+button:active,
+button:hover,
+input:active,
+input:hover,
+.circle:active,
+.circle:hover {
   cursor: pointer;
 }
 
 .header {
   height: max-content;
+}
+
+.header .route {
+  border: 3px solid #fff;
+  border-radius: 25px;
+  justify-self: en;
+  padding: 0.4rem;
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
 }
 
 .hero {
@@ -60,30 +79,32 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   font-weight: 700;
 }
 
-.paragraph, button, .button {
+.paragraph,
+button,
+.button {
   color: #fff;
   font-size: 1.6rem;
   font-weight: normal;
 }
 
 .date {
-	border-radius: 25px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 30%;
-	padding: 0 1.6rem;
-	position: absolute;
-	top: 0;
-	z-index: 10;
+  border-radius: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+  padding: 0 1.6rem;
+  position: absolute;
+  top: 0;
+  z-index: 10;
 }
 
 .date .button {
   border-radius: 25px;
   border: none;
-  color: #2782AC;
+  color: #2782ac;
   font-weight: 700;
 }
 
@@ -95,19 +116,20 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   padding: 1.6rem;
 }
 
-.date .button:hover, .date .button:active {
-  background-color: #2782AC;
+.date .button:hover,
+.date .button:active {
+  background-color: #2782ac;
   color: #fff;
 }
 
 .date .form label .paragraph {
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 
 .date :is(input, select, button) {
   background-color: #fff;
   border: none;
-  border-block-end: 2px solid #2782AC;
+  border-block-end: 2px solid #2782ac;
   width: 100%;
   height: 40px;
   align-self: end;
@@ -119,12 +141,12 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   cursor: pointer;
 }
 
-.form label{
-  margin: 0 .8rem;
+.form label {
+  margin: 0 0.8rem;
 }
 
 .form .paragraph {
-  color: #2782AC;
+  color: #2782ac;
 }
 
 /* .form select {
@@ -132,18 +154,20 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
 } */
 
 .form .button {
-  background-color: #2782AC;
+  background-color: #2782ac;
   border-radius: 10px;
   border: none;
   color: #fff;
   margin-bottom: 0;
 }
 
-.form .button:active, .form .button:hover {
+.form .button:active,
+.form .button:hover {
   background-color: #053247;
 }
 
-.main {
+.main,
+.schedules {
   padding: 1.6rem 1.6rem 0 1.6rem;
 }
 
@@ -164,7 +188,8 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   padding: 1.6rem;
 }
 
-.category:active, .category:hover {
+.category:active,
+.category:hover {
   background-color: var(--soft-blue);
   border-color: var(--soft-blue);
 }
@@ -176,8 +201,8 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   padding: 1.6rem;
 }
 
-.category .activity .paragraph{
-  color: #2782AC;
+.category .activity .paragraph {
+  color: #2782ac;
   font-weight: bold;
 }
 
@@ -251,18 +276,20 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
 
 .tours__container .image__container :is(img) {
   border-radius: 10px;
-	width: 150px;
-	max-width: revert;
-	height: 150px;
-  margin-inline: .8rem;
+  width: 150px;
+  max-width: revert;
+  height: 150px;
+  margin-inline: 0.8rem;
   transform: skewX(-10deg);
 }
 
-.tours__container .image__container :is(img):active, .tours__container .image__container :is(img):hover, .isActive {
-  animation: scale .1s;
+.tours__container .image__container :is(img):active,
+.tours__container .image__container :is(img):hover,
+.isActive {
+  animation: scale 0.1s;
   margin-inline-end: 1.6rem;
-	transform-origin: bottom;
-	transform: scaleY(1.2) skewX(-10deg);
+  transform-origin: bottom;
+  transform: scaleY(1.2) skewX(-10deg);
 }
 
 @keyframes scale {
@@ -281,13 +308,13 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
 }
 
 .tours__container .image__container:first-child :is(img):active {
-  animation: padding .15s;
-	margin-inline-start: 1.6rem;
+  animation: padding 0.15s;
+  margin-inline-start: 1.6rem;
 }
 
 @keyframes padding {
   0% {
-    margin-inline-start: .8rem;
+    margin-inline-start: 0.8rem;
   }
   100% {
     margin-inline-start: 1.6rem;
@@ -299,16 +326,16 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
 }
 
 .tours-description {
-	background-color: var(--soft-blue);
+  background-color: var(--soft-blue);
   border-radius: 5px;
   border-start-start-radius: 10px;
   border-start-end-radius: 10px;
-	position: relative;
+  position: relative;
   padding: 1.6rem;
-	padding-block-start: 7.6rem;
-	padding-block-end: 1.6rem;
-	bottom: 60px;
-	z-index: -1;
+  padding-block-start: 7.6rem;
+  padding-block-end: 1.6rem;
+  bottom: 60px;
+  z-index: -1;
 }
 
 .tours-description .title {
@@ -319,44 +346,60 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   font-size: 1.4rem;
 }
 
+.schedules .title {
+  margin-block-end: 1.6rem;
+}
+
+.schedules article {
+  background: #2782ac;
+  padding: 1.6rem;
+  border-radius: 10px;
+  margin-block-end: 1.6rem;
+}
+
+.schedules article .title {
+  margin-block-end: .8rem;
+}
+
 .modal {
-	width: 100%;
+  width: 100%;
   height: 300px;
   max-height: max-content;
-	min-height: 300px;
+  min-height: 300px;
   display: none;
-	padding: 1.6rem;
-	position: fixed;
-	left: 0;
-	top: 10%;
+  padding: 1.6rem;
+  position: fixed;
+  left: 0;
+  top: 10%;
   z-index: 20;
 }
 
 .modal .modal__content {
-  background-color: #2782AC;
-	border-radius: 10px;
-	width: 100%;
-	height: 100%;
+  background-color: #2782ac;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.6rem;
   padding-block-start: 3.2rem;
-
 }
 
 .modal .modal__content #text-container {
   text-align: center;
 }
 
-.modal .close, .form .close {
+.modal .close,
+.form .close {
   width: 100%;
   height: 32px;
   display: flex;
   justify-content: center;
 }
 
-.modal .circle, .form .circle {
+.modal .circle,
+.form .circle {
   background-color: #fff;
   border-radius: 50%;
   width: 32px;
@@ -368,10 +411,11 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
 }
 
 .form .circle {
-  background-color: #2782AC;
+  background-color: #2782ac;
 }
 
-.modal .rec, .form .rec {
+.modal .rec,
+.form .rec {
   background-color: #d9162c;
   width: 16px;
   height: 4px;
@@ -382,13 +426,12 @@ button:active, button:hover, input:active, input:hover, .circle:active, .circle:
   background-color: #fff;
 }
 
-.modal .rec:first-child, .form .rec:first-child {
-	transform: rotate(45deg);
+.modal .rec:first-child,
+.form .rec:first-child {
+  transform: rotate(45deg);
 }
 
-.modal .rec:last-child, .form .rec:last-child {
-	transform: rotate(-45deg);
-
+.modal .rec:last-child,
+.form .rec:last-child {
+  transform: rotate(-45deg);
 }
-
-

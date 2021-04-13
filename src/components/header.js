@@ -1,6 +1,9 @@
 import lake from '../assets/images/lake.jpg';
 
 const header = `
+<a href="#/schedule" class="route paragraph" id="schedule-route">
+  Schedules
+<a>
 <figure class="hero">
 <img src="${lake}" alt="">
 </figure>
